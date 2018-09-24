@@ -1,0 +1,43 @@
+<h1> Add A NEW Cat! </h1>
+
+<!-- action: the url to which we want to send data -->
+<!-- method: the http method that we want to use  -->
+
+<form action="/cats" method="post">
+    <br>
+
+    <label for="Name">New Cat Name</label>
+    <input type="text" name="form">
+
+    <br>
+    <label for="category">Category</label>
+    <select id="category" name="color">
+      <option disabled selected </selec>-- Please Select --</option>
+      <option value="Black">Black</option>
+      <option value="Orange">Orange</option>
+      <option value="Brown">Brown</option>
+    </select>
+
+    <br>
+
+    <label for="Description">Description</label>
+    <textarea name="Description"></textarea>
+
+    <br>
+
+    <!-- <input type="radio" > -->
+    <label for="gender">Male</label>
+    <input type="radio" name="gender" value="male">
+
+    <label for="gender">Female</label>
+    <input type="radio" name="gender" value="female">
+
+    <br>
+
+    <label for="year">Birth Date</label>
+    <input id="year" type="date" name="birth_date">
+
+    <br>
+
+    <input type="submit" value="Add The new cat!">
+</form>
