@@ -1,14 +1,14 @@
 /* PHASE 1: Header */
 
 body {
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
   background: #eee;
 }
 
 .header {
-  background: #f00 !important;
+  background: #f00;
   color: #fff;
   border-bottom: 1px solid #ccc;
 }
