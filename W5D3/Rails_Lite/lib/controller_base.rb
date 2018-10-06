@@ -21,6 +21,7 @@ class ControllerBase
 
   # Set the response status code and header
   def redirect_to(url)
+      raise "Can't do that!" if already_built_response?
 
       @res.status = 302
       @res['Location'] = url
@@ -32,18 +33,30 @@ class ControllerBase
   # Set the response's content type to the given type.
   # Raise an error if the developer tries to double render.
   def render_content(content, content_type)
-
+    raise "Can't do that!" if already_built_response?
 
     @res.write(content)
     @res['Content-Type'] = content_type
 
-    @already_built_response = true 
+    @already_built_response = true
   end
 
   # use ERB and binding to evaluate templates
   # pass the rendered html to render_content
   def render(template_name)
-    debugger
+    
+    dir_path = File.dirname(__FILE__)
+    template_fname = File.join(
+      dir_path, "..",
+      "views", self.class.name.underscore, "#{template_name}.html.erb"
+    )
+
+    template_code = File.read(template_fname)
+
+    render_content(
+      ERB.new(template_code).result(binding),
+      "text/html"
+    )
 
   end
 
