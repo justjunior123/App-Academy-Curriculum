@@ -162,7 +162,72 @@
 
 
 // -----------------------------------------------------------------
+
 // madLib
 // Write a function that takes three strings - a verb, an adjective, and
 // a noun - uppercases and interpolates them into the sentence "We shall
 // VERB the ADJECTIVE NOUN". Use ES6 template literals.
+
+// function madLib(verb,adjective,noun) {
+//
+//   console.log( `We shall ${verb.toUpperCase()} the ${adjective.toUpperCase()} ${noun.toUpperCase()}` );
+//
+// }
+//
+// madLib('walk','cat','there');
+
+// ------------------------------------------------------------------
+
+// isSubString
+// i. A String, called searchString.
+// ii. A String, called subString.
+// Output: A Boolean. true if the subString is a part of the searchString.
+
+// > isSubstring("time to program", "time")
+// true
+//
+// > isSubstring("Jump for joy", "joys")
+// false
+
+// function isSubString(searchString,subString) {
+//   if (searchString.includes(subString)) {
+//     return true;
+//   }
+//
+//   else {
+//     return false;
+//   }
+//
+// }
+//
+// isSubString("time to program", "time");
+
+// ------------------------------------------------------------------
+
+// fizzBuzz
+
+// 3 and 5 are magic numbers.
+// Define a function fizzBuzz(array) that takes an array and returns a
+// new array of every number in the array that is divisible by either 3
+// or 5, but not both.
+
+function fizzBuzz(arr) {
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] % 15 === 0) {
+      arr.splice(i,1,'fizzbuzz');
+    }
+
+    else if (arr[i] % 5 === 0) {
+      arr.splice(i,1,'fizz');
+    }
+
+    else if (arr[i] % 3 === 0) {
+      arr.splice(i,1,'buzz');
+    }
+  }
+  console.log(`${arr}`);
+}
+
+fizzBuzz([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]);
+
+// ------------------------------------------------------------------
