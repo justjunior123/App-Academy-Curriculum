@@ -211,23 +211,140 @@
 // new array of every number in the array that is divisible by either 3
 // or 5, but not both.
 
-function fizzBuzz(arr) {
-  for (var i = 0; i < arr.length; i++) {
-    if (arr[i] % 15 === 0) {
-      arr.splice(i,1,'fizzbuzz');
-    }
-
-    else if (arr[i] % 5 === 0) {
-      arr.splice(i,1,'fizz');
-    }
-
-    else if (arr[i] % 3 === 0) {
-      arr.splice(i,1,'buzz');
-    }
-  }
-  console.log(`${arr}`);
-}
-
-fizzBuzz([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]);
+// function fizzBuzz(arr) {
+//   for (var i = 0; i < arr.length; i++) {
+//     if (arr[i] % 15 === 0) {
+//       arr.splice(i,1,'fizzbuzz');
+//     }
+//
+//     else if (arr[i] % 5 === 0) {
+//       arr.splice(i,1,'fizz');
+//     }
+//
+//     else if (arr[i] % 3 === 0) {
+//       arr.splice(i,1,'buzz');
+//     }
+//   }
+//   console.log(`${arr}`);
+// }
+//
+// fizzBuzz([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]);
 
 // ------------------------------------------------------------------
+// isPrime
+
+// Define a function isPrime(number) that returns true if number is
+// prime. Otherwise, false. Assume number is a positive integer.
+
+// > isPrime(2)
+// true
+//
+// > isPrime(10)
+// false
+//
+// > isPrime(15485863)
+// true
+//
+// > isPrime(3548563)
+// false
+
+// function isPrime(number) {
+//   var primeArr = [];
+//
+//   if (number === 2) {
+//     return true;
+//   }
+//
+//   for (var i = 2; i < number; i++) {
+//     primeArr.push(i);
+//   }
+//
+//   for (var i = 0; i < primeArr.length; i++) {
+//
+//     if ( number % primeArr[i] === 0){
+//       return false;
+//     }
+//   }
+//
+//   if ( primeArr.length === 0 ){
+//     return false;
+//   }
+//
+//   return true;
+// }
+//
+// isPrime(2);
+
+// ------------------------------------------------------------------
+
+// sumOfNPrimes
+
+// Using firstNPrimes, write a function sumOfNPrimes(n) that returns the
+// sum of the first n prime numbers. Hint: use isPrime as a helper method.
+
+// > sumOfNPrimes(0)
+// 0
+//
+// > sumOfNPrimes(1)
+// 2
+//
+// > sumOfNPrimes(4)
+// 17
+
+// function isPrime(number) {
+//   var primeArr = [];
+//
+//   if (number === 2) {
+//     return true;
+//   }
+//
+//   for (var i = 2; i < number; i++) {
+//     primeArr.push(i);
+//   }
+//
+//   for (var i = 0; i < primeArr.length; i++) {
+//
+//     if ( number % primeArr[i] === 0){
+//       return false;
+//     }
+//   }
+//
+//   if ( primeArr.length === 0 ){
+//     return false;
+//   }
+//
+//   return true;
+// }
+//
+// function firstNPrimes(number) {
+//   var result = [];
+//   var i = 0;
+//
+//   while (result.length < number) {
+//     console.log(isPrime(i));
+//     if (isPrime(i)) {
+//       result.push(i);
+//     }
+//     i++;
+//   }
+//   return result;
+// }
+//
+// function sumOfNPrimes(array) {
+//
+//   var answer =firstNPrimes(array);
+//   console.log(array);
+//   if (answer === undefined) {
+//     return 0;
+//   }
+//   if (answer.length === 0) {
+//     return 0;
+//   }
+//   else {
+//     var sum = 0;
+//     for (var i = 0; i < answer.length; i++) {
+//       sum += answer[i];
+//     }
+//   }
+//   return sum;
+// }
