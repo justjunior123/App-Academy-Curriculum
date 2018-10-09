@@ -25,15 +25,15 @@
 
 // String#substrings - receives a string, returns an array of all substrings
 
-String.prototype.substrings = function () {
-  let stringArray = [];
-
-  for (var start = 0; start < this.length; start++) {
-    console.log(start);
-    for (var end = start + 1; end <= this.length; end++) {
-      stringArray.push(this.slice(start,end));
-    }
-  }
-
-  return stringArray;
-};
+// String.prototype.substrings = function () {
+//   let stringArray = [];
+//
+//   for (var start = 0; start < this.length; start++) {
+//     console.log(start);
+//     for (var end = start + 1; end <= this.length; end++) {
+//       stringArray.push(this.slice(start,end));
+//     }
+//   }
+//
+//   return stringArray;
+// };
