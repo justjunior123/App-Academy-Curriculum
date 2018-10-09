@@ -114,11 +114,11 @@
 // Make sure you can call it multiple times and keep chaining on more breakfast foods!
 
 
-function dinerBreakfast() {
-  let order = "I'd like cheesy scrambled eggs please.";
-  console.log(order);
-
-  return function (food) {
-    order = `${order.slice(0,order.length - 8)} and ${food}`;
-  };
-}
+// function dinerBreakfast() {
+//   let order = "I'd like cheesy scrambled eggs please.";
+//   console.log(order);
+//
+//   return function (food) {
+//     order = `${order.slice(0,order.length - 8)} and ${food}`;
+//   };
+// }
