@@ -22,28 +22,33 @@ View.prototype.exercise1 = function () {
   //Challenge: Give every square the class 'orange'
   //Result: Every square should turn orange (we already have a CSS rule)
 
-  //your code here!
+  $('li').addClass("orange");
 };
 
 View.prototype.exercise2 = function () {
   //Challenge: Remove every square
   //Result: Every square vanishes
 
-  //your code here!
+  $('.square').remove();
 };
 
 View.prototype.exercise3 = function () {
   //Challenge: Add an <h1> with the text 'i love jquery' under the grid.
   //Result: An <h1> with the text 'i love jquery' appears under the grid.
 
-  //your code here!
+  $('h1').text("jQuery");
 };
 
 View.prototype.exercise4 = function () {
   //Challenge: Write your first name in every other square.
   //Result: Your name appears in every other square.
 
-  //your code here!
+  const $li = $('li').filter(":even");
+
+  $li.each ( function(){
+    $( this ).text("Juan");
+  });
+
 };
 
 View.prototype.exercise5 = function () {
@@ -53,8 +58,14 @@ View.prototype.exercise5 = function () {
 
   //hint: checkout the addRow function at the bottom of the file: we set the
   //  'data-pos' of every square
+  // function notify() {
+  // alert( "clicked" );
+  // }
 
-  //your code here!
+  $( '.square' ).on( "click", element => {
+    const $element = $(element.currentTarget);
+    alert ($element.attr("data-pos"));
+  });
 };
 
 View.prototype.exercise6 = function () {
@@ -64,7 +75,11 @@ View.prototype.exercise6 = function () {
 
   //hint: use window._randomColorString() (defined at top) to get a random color!
 
-  //your code here!
+  $('.square').each( (idx, el) => {
+   var $sq = $(el);
+   $sq.css("background-color", _randomColorString());
+ });
+
 };
 
 View.prototype.exercise7 = function(){
@@ -73,8 +88,11 @@ View.prototype.exercise7 = function(){
   //console. The color won't be the color's name, but its rbg value.
   //You should push the button for exercise 6 first to try it on the
   //rainbow.
-
-  //your code here!
+  $('#easel').on("mouseenter", ".square", e => {
+    const $sq = $(e.currentTarget);
+    console.log($sq.css("background-color"));
+  });
+  
 };
 
 
