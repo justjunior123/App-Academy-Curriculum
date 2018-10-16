@@ -19,27 +19,64 @@ document.addEventListener("DOMContentLoaded", () => {
   // adding SF places as list items
 
   // --- your code here!
-  const favoriteInput = document.getElementsByClassName("favorite-submit");
-  favoriteInput.addEventListener("submit", event => {
+  const handleFavoriteSubmit = (e) => {
+    e.preventDefault();
 
-    event.preventDefault();
-    const submitInputEl = document.getElementsByTagName('submit');
-    const submitValue = submitInputEl.value;
-    submitInputEl.value = "";
+    const favoriteInput = document.querySelector(".favorite-input");
+    const favorite = favoriteInput.value;
+    favoriteInput.value = "";
 
-    const ul = document.getElementById('sf-places');
-    const li = document.createElement('li');
+    const newListLi = document.createElement("li");
+    newListLi.textContent = favorite;
 
-    li.textcontent = submitValue;
-    ul.append(li);
+    const favoritesList = document.getElementById("sf-places");
+    favoritesList.appendChild(newListLi);
+  };
 
-  });
+  const listSubmitButton = document.querySelector(".favorite-submit");
+  listSubmitButton.addEventListener("click", handleFavoriteSubmit);
+
 
 
   // adding new photos
 
   // --- your code here!
 
+  const handlePhotoForm = (event) => {
 
+    const photoFormDiv = document.querySelector('.photo-form-container');
+
+      if (photoFormDiv.className === "photo-form-container hidden") {
+        photoFormDiv.className = "photo-form-container";
+      }
+      else {
+        photoFormDiv.className = "photo-form-container hidden";
+      }
+    };
+
+  const togglePhotoForm = document.querySelector('.photo-show-button');
+  togglePhotoForm.addEventListener("click",handlePhotoForm);
+
+// ------- Handle the photo submission -------
+  const submitUrlPhoto = (event) => {
+    event.preventDefault();
+
+    const photoUrlInput = document.querySelector(".photo-url-input");
+    const photoUrl = photoUrlInput.value;
+    photoUrlInput.value = "";
+
+    const newImg = document.createElement("img");
+    newImg.src = photoUrl;
+
+    const newli = document.createElement("li");
+    newli.appendChild(newImg);
+
+    const dogPhotoList = document.querySelector(".dog-photos");
+    dogPhotoList.appendChild(newli);
+  };
+// ----------- Event Handler For Add photo button -------
+
+const submitPhotoButton = document.querySelector(".photo-url-submit");
+submitPhotoButton.addEventListener("click",submitUrlPhoto);
 
 });
