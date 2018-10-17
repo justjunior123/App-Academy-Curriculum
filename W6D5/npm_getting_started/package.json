@@ -1,11 +1,13 @@
 {
-  "name": "getting_started_npm",
+  "name": "npm_getting_started",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "entry.jsx",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack --mode=development --watch"
   },
+
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -16,7 +18,10 @@
     "babel-loader": "^8.0.4",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "webpack": "^4.21.0",
+    "webpack": "^4.21.0"
+  },
+
+  "devDependencies": {
     "webpack-cli": "^3.1.2"
   }
 }
