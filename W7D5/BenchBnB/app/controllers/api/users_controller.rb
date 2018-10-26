@@ -1,11 +1,11 @@
 class Api::UsersController < ApplicationController
-  protect_from_forgery with: :exception
+  # before_action :require_current_user!, except: [:create]
 
   def create
     @user = User.new(user_params)
 
     if @user.save
-      login(@user)
+      login!(@user)
       render 'api/users/show'
     else
       render @user.errors.full_messages, status: 422
