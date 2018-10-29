@@ -13,8 +13,8 @@ const usersReducer = (state = {}, action) => {
     //   return merge({}, state, { [action.author.id]: action.author });
     // case RECEIVE_BENCH:
     //   return merge({}, state, action.authors);
-    // default:
-    //   return state;
+    default:
+      return state;
   }
 };
 
