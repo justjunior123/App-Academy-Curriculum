@@ -1,9 +1,9 @@
 class Api::UsersController < ApplicationController
-  # before_action :require_current_user!, except: [:create]
+  before_action :require_current_user!, except: [:create]
 
   def create
     @user = User.new(user_params)
-
+    debugger
     if @user.save
       login!(@user)
       render 'api/users/show'
