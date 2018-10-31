@@ -86,6 +86,37 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./frontend/actions/bench_actions.js":
+/*!*******************************************!*\
+  !*** ./frontend/actions/bench_actions.js ***!
+  \*******************************************/
+/*! exports provided: RECEIVE_BENCHES, recieveBenches, fetchBenches */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_BENCHES", function() { return RECEIVE_BENCHES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recieveBenches", function() { return recieveBenches; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchBenches", function() { return fetchBenches; });
+/* harmony import */ var _util_bench_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/bench_api_util */ "./frontend/util/bench_api_util.js");
+
+var RECEIVE_BENCHES = 'RECEIVE_BENCHES';
+var recieveBenches = function recieveBenches(benches) {
+  return {
+    type: "RECEIVE_BENCHES",
+    benches: benches
+  };
+};
+var fetchBenches = function fetchBenches() {
+  return function (dispatch) {
+    return _util_bench_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchBenches"]().then(function (benches) {
+      return dispatch(recieveBenches(benches));
+    });
+  };
+};
+
+/***/ }),
+
 /***/ "./frontend/actions/session_action.js":
 /*!********************************************!*\
   !*** ./frontend/actions/session_action.js ***!
@@ -575,6 +606,36 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 
 /***/ }),
 
+/***/ "./frontend/reducers/benches_reducer.js":
+/*!**********************************************!*\
+  !*** ./frontend/reducers/benches_reducer.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_bench_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/bench_actions */ "./frontend/actions/bench_actions.js");
+
+
+var benchesReducer = function benchesReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(state);
+
+  switch (action.type) {
+    case _actions_bench_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_BENCHES"]:
+      return action.benches;
+
+    default:
+      return state;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (benchesReducer);
+
+/***/ }),
+
 /***/ "./frontend/reducers/entities_reducer.js":
 /*!***********************************************!*\
   !*** ./frontend/reducers/entities_reducer.js ***!
@@ -585,15 +646,16 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
-/* harmony import */ var _users_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./users_reducer */ "./frontend/reducers/users_reducer.js");
- // import benches from './benches_reducer';
-// import reviews from './reviews_reducer';
+/* harmony import */ var _benches_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./benches_reducer */ "./frontend/reducers/benches_reducer.js");
+/* harmony import */ var _users_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./users_reducer */ "./frontend/reducers/users_reducer.js");
+
+ // import reviews from './reviews_reducer';
 
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  // benches,
+  benches: _benches_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
   // reviews,
-  users: _users_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]
+  users: _users_reducer__WEBPACK_IMPORTED_MODULE_2__["default"]
 }));
 
 /***/ }),
