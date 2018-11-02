@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   end
 
   namespace :api, defaults: {format: :json} do
-    resources :benches, only: [:index,:create]
+    resources :benches, only: [:index,:create,:show]
   end
-  
+
   root "static_pages#root"
 end

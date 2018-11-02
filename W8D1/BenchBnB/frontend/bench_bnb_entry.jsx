@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom';
 // Component
 import Root from './components/root';
 // Util
-import {fetchBenches,createBench} from './util/bench_api_util.js';
+import {fetchBenches} from './actions/bench_actions.js';
+import {createBench,fetchBench} from './util/bench_api_util.js';
 import {login,logout,signup} from './util/session_api_util.js';
 // store
 import configureStore from './store/store';
@@ -33,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.dispatch = store.dispatch;
   window.fetchBenches = fetchBenches;
   window.createBench = createBench;
+  window.fetchBench = fetchBench;
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store}/>,root);
 
