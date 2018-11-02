@@ -367,15 +367,13 @@ function (_React$Component) {
   _createClass(BenchIndex, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.fetchBenches(this.props.benchId);
+      this.props.fetchBenches();
     }
   }, {
     key: "render",
     value: function render() {
       var description = this.props.benches.description;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "#"
-      }, description);
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, description || "No description");
     }
   }]);
 
@@ -404,8 +402,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var mapStateToProps = function mapStateToProps(state, _ref) {
   var match = _ref.match;
-  // const benchId = parseInt(match.params.benchId);
-  var benchId = 1;
+  var benchId = parseInt(match.params.benchId); // const benchId = 1;
+
   return {
     benchId: benchId,
     bench: state.entities.benches // reviews
@@ -989,10 +987,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchBenches", function() { return fetchBenches; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createBench", function() { return createBench; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchBench", function() { return fetchBench; });
-var fetchBenches = function fetchBenches() {
+var fetchBenches = function fetchBenches(data) {
   return $.ajax({
     method: 'GET',
-    url: 'api/benches'
+    url: 'api/benches',
+    data: data
   });
 };
 var createBench = function createBench(bench) {
@@ -1007,10 +1006,7 @@ var createBench = function createBench(bench) {
 var fetchBench = function fetchBench(id) {
   return $.ajax({
     method: 'GET',
-    url: "api/benches/id",
-    data: {
-      id: id
-    }
+    url: "api/benches/".concat(id)
   });
 };
 

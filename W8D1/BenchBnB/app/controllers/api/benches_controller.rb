@@ -14,7 +14,7 @@ class Api::BenchesController < ApplicationController
 
   def show
     # debugger
-    @bench = Bench.find(:id)
+    @bench = Bench.find(params[:id])
   end
 
   def create

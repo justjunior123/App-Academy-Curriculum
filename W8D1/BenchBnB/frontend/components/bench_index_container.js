@@ -4,8 +4,8 @@ import { fetchBenches } from '../actions/bench_actions';
 import BenchIndex from './bench_index';
 
 const mapStateToProps = (state, { match }) => {
-// const benchId = parseInt(match.params.benchId);
-const benchId = 1;
+const benchId = parseInt(match.params.benchId);
+// const benchId = 1;
 return {
     benchId,
     bench: state.entities.benches
