@@ -13,7 +13,7 @@ class Api::BenchesController < ApplicationController
   end
 
   def show
-    # debugger
+    
     @bench = Bench.find(params[:id])
   end
 

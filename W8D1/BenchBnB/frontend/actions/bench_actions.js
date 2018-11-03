@@ -8,7 +8,7 @@ export const recieveBenches = benches => ({
   benches
 });
 
-export const receiveBench = ({ bench, /*reviews, authors*/ }) => ({
+export const receiveBench = ({ bench /*reviews, authors*/ }) => ({
   type: RECEIVE_BENCH,
   bench
   // reviews,

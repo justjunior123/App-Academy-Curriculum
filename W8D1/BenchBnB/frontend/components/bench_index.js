@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-
+import {fetchBench} from '../actions/bench_actions.js';
 
 class BenchIndex extends React.Component {
   componentDidMount() {
