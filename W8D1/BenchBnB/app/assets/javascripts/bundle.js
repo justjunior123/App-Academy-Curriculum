@@ -111,9 +111,9 @@ var recieveBenches = function recieveBenches(benches) {
     benches: benches
   };
 };
-var receiveBench = function receiveBench(_ref) {
-  var bench = _ref.bench;
+var receiveBench = function receiveBench(bench) {
   return {
+    /*reviews, authors*/
     type: RECEIVE_BENCH,
     bench: bench // reviews,
     // authors,
@@ -263,7 +263,7 @@ document.addEventListener('DOMContentLoaded', function () {
   window.dispatch = store.dispatch;
   window.fetchBenches = _actions_bench_actions_js__WEBPACK_IMPORTED_MODULE_3__["fetchBenches"];
   window.createBench = _util_bench_api_util_js__WEBPACK_IMPORTED_MODULE_4__["createBench"];
-  window.fetchBench = _util_bench_api_util_js__WEBPACK_IMPORTED_MODULE_4__["fetchBench"];
+  window.fetchBench = _actions_bench_actions_js__WEBPACK_IMPORTED_MODULE_3__["fetchBench"];
   var root = document.getElementById('root');
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_2__["default"], {
     store: store
@@ -351,6 +351,24 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+// import React from 'react';
+// import BenchIndexItem from './bench_index_item';
+//
+// const BenchIndex = ({ benches }) => (
+//   <div>
+//     <h1>Benches: </h1>
+//     {benches.map(bench => (
+//       <BenchIndexItem
+//         bench={bench}
+//         key={bench.id}
+//       />
+//     ))}
+//   </div>
+// );
+//
+// export default BenchIndex;
+// ******************************************************************
+// works 1
 
 
 
@@ -369,20 +387,46 @@ function (_React$Component) {
   _createClass(BenchIndex, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.fetchBenches();
+      console.log("Component Mounted");
+      this.props.fetchBenches(console.log("Inside fetchBenches"));
+      console.log("What does this.props look like before mounted", this.props);
     }
   }, {
     key: "render",
     value: function render() {
-      var description = this.props.benches.description;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, description || "No description");
+      console.log("In the render function", this.props); // console.log(this.props.benches);
+
+      var _ref = this.props || '',
+          benches = _ref.benches; // var bench = this.props.benches[0] || '';
+      // var description = bench.description || '';
+
+
+      console.log('nil');
+      return (// console.log(bench.description),
+        console.log('In the return block'), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "No Description")))
+      );
     }
   }]);
 
   return BenchIndex;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (BenchIndex);
+/* harmony default export */ __webpack_exports__["default"] = (BenchIndex); // *****************************************************
+// All working state
+//   render() {
+//     // console.log(this.props.benches);
+//     const {benches} = this.props;
+//     console.log({benches});
+//     // const {description} = benches[0];
+//     // console.log(description);
+//     return(
+//       <div>
+//         { benches[0] || "No Description" }
+//       </div>
+//     );
+//   }
+// }
+// export default BenchIndex;
 
 /***/ }),
 
@@ -396,18 +440,20 @@ function (_React$Component) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _actions_bench_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/bench_actions */ "./frontend/actions/bench_actions.js");
-/* harmony import */ var _bench_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./bench_index */ "./frontend/components/bench_index.js");
+/* harmony import */ var _reducers_selectors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../reducers/selectors */ "./frontend/reducers/selectors.js");
+/* harmony import */ var _actions_bench_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../actions/bench_actions */ "./frontend/actions/bench_actions.js");
+/* harmony import */ var _bench_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./bench_index */ "./frontend/components/bench_index.js");
+
 
 
 
 
 var mapStateToProps = function mapStateToProps(state, _ref) {
   var match = _ref.match;
-  // const benchId = parseInt(match.params.benchId);
-  console.log(state); // console.log({match});
+  var benchId = parseInt(match.params.benchId); // const benchId = 1;
+  // console.log(state.entities.benches[0]);
+  // console.log(benchId);
 
-  var benchId = 1;
   return {
     benchId: benchId,
     benches: state.entities.benches // reviews
@@ -418,12 +464,12 @@ var mapStateToProps = function mapStateToProps(state, _ref) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     fetchBenches: function fetchBenches(id) {
-      return dispatch(Object(_actions_bench_actions__WEBPACK_IMPORTED_MODULE_1__["fetchBenches"])(id));
+      return dispatch(Object(_actions_bench_actions__WEBPACK_IMPORTED_MODULE_2__["fetchBenches"])(id));
     }
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_bench_index__WEBPACK_IMPORTED_MODULE_2__["default"]));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_bench_index__WEBPACK_IMPORTED_MODULE_3__["default"]));
 
 /***/ }),
 
@@ -844,6 +890,40 @@ var rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])(
 
 /***/ }),
 
+/***/ "./frontend/reducers/selectors.js":
+/*!****************************************!*\
+  !*** ./frontend/reducers/selectors.js ***!
+  \****************************************/
+/*! exports provided: selectBench, selectReviewsForBench, asArray */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "selectBench", function() { return selectBench; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "selectReviewsForBench", function() { return selectReviewsForBench; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "asArray", function() { return asArray; });
+var selectBench = function selectBench(_ref, benchId) {
+  var benches = _ref.benches;
+  return benches[benchId] || {
+    reviewIds: []
+  };
+};
+var selectReviewsForBench = function selectReviewsForBench(_ref2, bench) {
+  var benches = _ref2.benches,
+      reviews = _ref2.reviews;
+  return bench.reviewIds.map(function (reviewId) {
+    return reviews[reviewId];
+  });
+};
+var asArray = function asArray(_ref3) {
+  var benches = _ref3.benches;
+  return Object.keys(benches).map(function (key) {
+    return benches[key];
+  });
+};
+
+/***/ }),
+
 /***/ "./frontend/reducers/session_errors_reducer.js":
 /*!*****************************************************!*\
   !*** ./frontend/reducers/session_errors_reducer.js ***!
@@ -1010,7 +1090,10 @@ var createBench = function createBench(bench) {
 var fetchBench = function fetchBench(id) {
   return $.ajax({
     method: 'GET',
-    url: "api/benches/".concat(id)
+    url: "api/benches/".concat(id),
+    data: {
+      id: id
+    }
   });
 };
 

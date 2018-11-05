@@ -2,7 +2,7 @@ class Api::BenchesController < ApplicationController
   before_action :require_logged_in, only: [:create]
 
   def index
-
+    # debugger
     # @bench = Bench.find_by_credentials(params[:id])
     @bench = Bench.all
     if @bench
@@ -13,7 +13,6 @@ class Api::BenchesController < ApplicationController
   end
 
   def show
-    
     @bench = Bench.find(params[:id])
   end
 

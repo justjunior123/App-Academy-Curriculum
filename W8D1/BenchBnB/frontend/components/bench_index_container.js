@@ -1,13 +1,14 @@
 import { connect } from 'react-redux';
-
-import { fetchBenches } from '../actions/bench_actions';
+import {asArray} from '../reducers/selectors';
+import { fetchBenches,fetchBench } from '../actions/bench_actions';
 import BenchIndex from './bench_index';
 
 const mapStateToProps = (state, { match }) => {
-// const benchId = parseInt(match.params.benchId);
-console.log(state);
-// console.log({match});
-const benchId = 1;
+const benchId = parseInt(match.params.benchId);
+// const benchId = 1;
+
+// console.log(state.entities.benches[0]);
+// console.log(benchId);
 return {
     benchId,
     benches: state.entities.benches
@@ -15,9 +16,9 @@ return {
   };
 };
 
-
 const mapDispatchToProps = dispatch => ({
   fetchBenches: id => dispatch(fetchBenches(id))
+
 });
 export default connect(
   mapStateToProps,

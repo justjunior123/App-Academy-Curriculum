@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom';
 // Component
 import Root from './components/root';
 // Util
-import {fetchBenches} from './actions/bench_actions.js';
-import {createBench,fetchBench} from './util/bench_api_util.js';
+import {fetchBenches,fetchBench} from './actions/bench_actions.js';
+import {createBench} from './util/bench_api_util.js';
 import {login,logout,signup} from './util/session_api_util.js';
 // store
 import configureStore from './store/store';

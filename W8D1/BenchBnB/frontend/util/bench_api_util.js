@@ -17,6 +17,7 @@ export const createBench = bench => {
 export const fetchBench = id => (
   $.ajax({
     method: 'GET',
-    url: `api/benches/${id}`
+    url: `api/benches/${id}`,
+    data: {id}
   })
 );
