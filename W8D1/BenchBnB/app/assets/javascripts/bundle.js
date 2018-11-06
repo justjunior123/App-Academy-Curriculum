@@ -472,12 +472,26 @@ function (_React$Component) {
   }
 
   _createClass(BenchMap, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var map = this.refs.map; // const mapDOMNode = this.refs.map;
+
+      var mapOptions = {
+        center: {
+          lat: 37.7758,
+          lng: -122.435
+        },
+        zoom: 13
+      };
+      this.map = new google.maps.Map(map, mapOptions) || "";
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "map",
         ref: "map"
-      }, " Map ");
+      }, "Map");
     }
   }]);
 
@@ -617,7 +631,7 @@ __webpack_require__.r(__webpack_exports__);
  // import FilterForm from './filter_form';
 
 
- // import BenchMap from './../bench_map/bench_map';
+
 
 var Search = function Search(_ref) {
   var benches = _ref.benches;
