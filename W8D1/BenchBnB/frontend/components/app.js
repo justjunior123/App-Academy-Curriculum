@@ -9,7 +9,7 @@ import {
 } from 'react-router-dom';
 
 import GreetingContainer from './greeting/greeting_container';
-import BenchIndexContainer from './bench_index_container';
+import SearchContainer from './search_container';
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import { AuthRoute } from '../util/route_util';
@@ -25,7 +25,7 @@ const App = () => (
 
     <AuthRoute path="/login" component={LogInFormContainer} />
     <AuthRoute path="/signup" component={SignUpFormContainer} />
-    <Route exact path="/" component={ BenchIndexContainer } />
+    <Route exact path="/" component={ SearchContainer } />
   </div>
 );
 export default App;
