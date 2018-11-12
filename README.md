@@ -24,11 +24,36 @@ This repository contains the files I worked on during my App Academy 2018 cohort
   * /[W3D5](https://github.com/justjunior89/HW/tree/master/W3D5/Active_Record_Exercises)/ Build Active Record Lite!
 
 ### Week 4 (Rails)
+  * /[W1D2]()/ First Routes & Controllers, Contacts API Project
+  * /[W1D2]()/
+  * /[W1D2]()/
+  * /[W1D2]()/
+  * /[W1D2]()/
 
 ### Week 5 (Rails and Javascript)
+  * /[W1D2]()/
+  * /[W1D2]()/
+  * /[W1D2]()/
+  * /[W1D2]()/
+  * /[W1D2]()/
 
 ### Week 6 (JS and JQuery)
+  * /[W1D2]()/
+  * /[W1D2]()/
+  * /[W1D2]()/
+  * /[W1D2]()/
+  * /[W1D2]()/
 
 ### Week 7 (React and Redux)
+  * /[W1D2]()/
+  * /[W1D2]()/
+  * /[W1D2]()/
+  * /[W1D2]()/
+  * /[W1D2]()/
 
 ### Week 8 Beyond
+  * /[W1D2]()/
+  * /[W1D2]()/
+  * /[W1D2]()/
+  * /[W1D2]()/
+  * /[W1D2]()/
