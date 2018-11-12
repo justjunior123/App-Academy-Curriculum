@@ -11,7 +11,11 @@ This repository contains the files I worked on during my App Academy 2018 cohort
   * /[W1D4]()/ Screwdoku and Minesweeper
   * /[W1D5]()/ Intro to PolyTreeNodes, Knight's Travails, Tic-Tac-Toe AI
 ### Week 2 (Ruby)
-
+  * /[W2D1](https://github.com/justjunior89/HW/tree/master/W2D1)/ Simon, Chess Part 1
+  * /[W2D2]()/ Mancala, Chess Part 2
+  * /[W2D3]()/
+  * /[W2D4]()/
+  * /[W2D5]()/
 ### Week 3 (SQL and ActiveRecord)
 
 ### Week 4 (Rails)
