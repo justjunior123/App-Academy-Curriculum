@@ -25,10 +25,10 @@ This repository contains the files I worked on during my App Academy 2018 cohort
 
 ### Week 4 (Rails)
   * /[W4D1](https://github.com/justjunior89/HW/tree/master/W4D1)/ First Routes & Controllers, Contacts API Project
-  * /[W4D2]()/
-  * /[W4D3]()/
-  * /[W4D4]()/
-  * /[W4D5]()/
+  * /[W4D2](https://github.com/justjunior89/HW/tree/master/W4D2/ninety_nine_cats)/ 99 Cats Part 1: Associations and Forms
+  * /[W4D3](https://github.com/justjunior89/HW/tree/master/W4D2)/ 99 Cats Part 2: Authentication
+  * /[W4D4](https://github.com/justjunior89/HW/tree/master/W4D4)/ Music App
+  * /[W4D5](https://github.com/justjunior89/HW/tree/master/W4D5)/ Music App and Goal App
 
 ### Week 5 (Rails and Javascript)
   * /[W5D1]()/
