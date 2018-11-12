@@ -17,6 +17,11 @@ This repository contains the files I worked on during my App Academy 2018 cohort
   * /[W2D4](https://github.com/justjunior89/HW/tree/master/W2D4)/ Big-O-Exercises and Projects
   * /[W2D5](https://github.com/justjunior89/HW/tree/master/W2D5)/ Hash Map & LRU Cache Project
 ### Week 3 (SQL and ActiveRecord)
+  * /[W3D1](https://github.com/justjunior89/HW/tree/master/W3D1/SQL_Z00)/ SQL Zoo
+  * /[W3D2](https://github.com/justjunior89/HW/tree/master/W3D2)/ App Academy Questions, Plays-Playwrights Object Relational Mapping
+  * /[W3D3](https://github.com/justjunior89/HW/tree/master/W3D3)/ Associations exercises, and URL Project
+  * /[W3D4]()/
+  * /[W3D5]()/
 
 ### Week 4 (Rails)
 
