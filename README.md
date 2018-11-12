@@ -20,8 +20,8 @@ This repository contains the files I worked on during my App Academy 2018 cohort
   * /[W3D1](https://github.com/justjunior89/HW/tree/master/W3D1/SQL_Z00)/ SQL Zoo
   * /[W3D2](https://github.com/justjunior89/HW/tree/master/W3D2)/ App Academy Questions, Plays-Playwrights Object Relational Mapping
   * /[W3D3](https://github.com/justjunior89/HW/tree/master/W3D3)/ Associations exercises, and URL Project
-  * /[W3D4]()/
-  * /[W3D5]()/
+  * /[W3D4](https://github.com/justjunior89/HW/tree/master/W3D4)/ Movie Buff SQL exercises and Polls Project
+  * /[W3D5](https://github.com/justjunior89/HW/tree/master/W3D5/Active_Record_Exercises)/ Build Active Record Lite!
 
 ### Week 4 (Rails)
 
