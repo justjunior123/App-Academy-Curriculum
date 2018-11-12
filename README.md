@@ -5,7 +5,7 @@ This repository contains the files I worked on during my App Academy 2018 cohort
 ## Daily Coursework and Homework
 
 ### Week 1 (Ruby)
-..* Enumerable exercises and Ghost game
+  * Enumerable exercises and Ghost game
 ### Week 2 (Ruby)
 
 ### Week 3 (SQL and ActiveRecord)
