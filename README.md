@@ -15,7 +15,7 @@ This repository contains the files I worked on during my App Academy 2018 cohort
   * /[W2D2](https://github.com/justjunior89/HW/tree/master/W2D2)/ Mancala, Chess Part 2
   * /[W2D3](https://github.com/justjunior89/HW/tree/master/W2D3)/ Test Driven Development(TDD) Projects and Poker
   * /[W2D4](https://github.com/justjunior89/HW/tree/master/W2D4)/ Big-O-Exercises and Projects
-  * /[W2D5]()/
+  * /[W2D5](https://github.com/justjunior89/HW/tree/master/W2D5)/ Hash Map & LRU Cache Project
 ### Week 3 (SQL and ActiveRecord)
 
 ### Week 4 (Rails)
