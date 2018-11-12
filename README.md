@@ -24,7 +24,7 @@ This repository contains the files I worked on during my App Academy 2018 cohort
   * /[W3D5](https://github.com/justjunior89/HW/tree/master/W3D5/Active_Record_Exercises)/ Build Active Record Lite!
 
 ### Week 4 (Rails)
-  * /[W4D1]()/ First Routes & Controllers, Contacts API Project
+  * /[W4D1](https://github.com/justjunior89/HW/tree/master/W4D1)/ First Routes & Controllers, Contacts API Project
   * /[W4D2]()/
   * /[W4D3]()/
   * /[W4D4]()/
