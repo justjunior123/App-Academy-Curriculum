@@ -31,20 +31,20 @@ This repository contains the files I worked on during my App Academy 2018 cohort
   * /[W4D5](https://github.com/justjunior89/HW/tree/master/W4D5)/ Music App and Goal App
 
 ### Week 5 (Rails and Javascript)
-  * /[W5D1]()/
-  * /[W5D2]()/
-  * /[W5D3]()/
-  * /[W5D4]()/
-  * /[W5D5]()/
+  * /[W5D1](https://github.com/justjunior89/HW/tree/master/W5D1)/ App Academy Times and CSS Homework
+  * /[W5D2](https://github.com/justjunior89/HW/tree/master/W5D2)/ Polymorphism and Concerns
+  * /[W5D3](https://github.com/justjunior89/HW/tree/master/W5D3)/ Rails Lite
+  * /[W5D4](https://github.com/justjunior89/HW/tree/master/W5D4)/ Javascript Fundamentals
+  * /[W5D5](https://github.com/justjunior89/HW/tree/master/W5D5)/ Intro to Callbacks, Towers of Hanoi, Tic-Tac-Toe
 
 ### Week 6 (JS and JQuery)
-  * /[W6D1]()/
-  * /[W6D2]()/
-  * /[W6D3]()/
-  * /[W6D4]()/
-  * /[W6D5]()/
+  * /[W6D1](https://github.com/justjunior89/HW/tree/master/W6D1)/ Intro to Webpack, Canvas, Prototypal Inheritance Exercises
+  * /[W6D2](https://github.com/justjunior89/HW/tree/master/W6D2)/ Intro to JQuery, Tic-Tac-Toe, Towers of Hanoi
+  * /[W6D3](https://github.com/justjunior89/HW/tree/master/W6D3)/ Intro to AJAX, AJAX Twitter Clone
+  * /[W6D4](https://github.com/justjunior89/HW/tree/master/W6D4)/ JQuery Lite, Vanilla DOM Manipulation, and Mail app
 
 ### Week 7 (React and Redux)
+  * /[W6D5]()/ 
   * /[W1D2]()/
   * /[W1D2]()/
   * /[W1D2]()/
