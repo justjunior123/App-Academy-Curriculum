@@ -8,8 +8,8 @@ This repository contains the files I worked on during my App Academy 2018 cohort
   * /[W1D1]()/ Enumerable exercises and Ghost game
   * /[W1D2]()/
   * /[W1D3]()/
-  * /[W1D4]()/ Screwdoku and Minesweeper
-  * /[W1D5]()/ Intro to PolyTreeNodes, Knight's Travails, Tic-Tac-Toe AI
+  * /[W1D4](https://github.com/justjunior89/HW/tree/master/W1D4)/ Screwdoku and Minesweeper
+  * /[W1D5](https://github.com/justjunior89/HW/tree/master/W1D5)/ Intro to PolyTreeNodes, Knight's Travails, Tic-Tac-Toe AI
 ### Week 2 (Ruby)
   * /[W2D1](https://github.com/justjunior89/HW/tree/master/W2D1)/ Simon, Chess Part 1
   * /[W2D2](https://github.com/justjunior89/HW/tree/master/W2D2)/ Mancala, Chess Part 2
