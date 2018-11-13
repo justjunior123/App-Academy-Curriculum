@@ -1,4 +1,4 @@
-# App Academy Homeworks
+# App Academy Curriculum and Associated Homework
 
 This repository contains the files I worked on during my App Academy 2018 cohort.
 
