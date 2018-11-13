@@ -44,16 +44,12 @@ This repository contains the files I worked on during my App Academy 2018 cohort
   * /[W6D4](https://github.com/justjunior89/HW/tree/master/W6D4)/ JQuery Lite, Vanilla DOM Manipulation, and Mail app
 
 ### Week 7 (React and Redux)
-  * /[W6D5]()/ 
-  * /[W1D2]()/
-  * /[W1D2]()/
-  * /[W1D2]()/
-  * /[W1D2]()/
-  * /[W1D2]()/
+  * /[W6D5](https://github.com/justjunior89/HW/tree/master/W6D5)/ React Widgets, React Calculator, Minesweeper
+  * /[W7D1](https://github.com/justjunior89/HW/tree/master/W7D1)/ Todo-List Fullstack; Front-End W/Redux
+  * /[W7D2](https://github.com/justjunior89/HW/tree/master/W7D2)/ React Middleware Homework & Todo-List Continued...
+  * /[W7D3](https://github.com/justjunior89/HW/tree/master/W7D3)/ Giphy's, Jbuilder Exercises
+  * /[W7D4](https://github.com/justjunior89/HW/tree/master/W7D4)/ Pokedex W/Jbuilder and Rainbow Routes
+  * /[W7D5](https://github.com/justjunior89/HW/tree/master/W7D5)/ BenchBnB
 
 ### Week 8 Beyond
-  * /[W1D2]()/
-  * /[W1D2]()/
-  * /[W1D2]()/
-  * /[W1D2]()/
-  * /[W1D2]()/
+  * /[W8D1](https://github.com/justjunior89/HW/tree/master/W8D1)/ BenchBnB Continued...
